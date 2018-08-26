@@ -1,0 +1,8 @@
+/**
+ * Basic background styling for parallax elements
+ */
+.parallax {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

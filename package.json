@@ -1,0 +1,27 @@
+{
+  "name": "parallax-background",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp"
+  },
+  "author": "Daniel Högel <hoegel.daniel@gmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    "> 0.01%",
+    "ie 9"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}
