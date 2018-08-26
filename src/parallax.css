@@ -1,5 +1,7 @@
 /**
  * Basic background styling for parallax elements
+ * @author Daniel Högel <hoegel.daniel@gmail.com>
+ * @version 1.0
  */
 .parallax {
     background-size: cover;
