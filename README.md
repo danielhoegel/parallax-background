@@ -1,6 +1,8 @@
 # Parallax Background
 Add a parallax scrolling effect to html elements with a backround image.
 
+**DEMO**: https://danielhoegel.github.io/parallax-background/
+
 ## Usage
 ### 1. Import the `/dist/parallax.min.js` file into your project
 
