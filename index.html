@@ -14,9 +14,60 @@
 
       body {
         font-family: sans-serif;
-        max-width: 720px;
+        max-width: 1140px;
         margin: 2rem auto;
         padding: 1rem;
+        line-height: 1.5;
+        background-color: #fcfcfc;
+        color: #2a2a2a;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .description {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: rgb(0, 85, 175);
+        text-decoration: none;
+      }
+
+      a:hover { color: hsl(211, 100%, 51%); }
+      a:active { color: hsl(211, 100%, 60%); }
+
+      /* TEXT CONTROLS */
+      #control {
+        position: fixed;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 10;
+      }
+
+      button,
+      .button {
+        background-color: #eee;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        border: none;
+        font-size: 1rem;
+        padding: 0.5em 0.85em;
+        cursor: pointer;
+        margin: 0.5rem;
+        transition: 0.15 ease-in-out;
+      }
+
+      button:hover,
+      .button:hover {
+        background-color: #ddd;
+      }
+
+      button:active,
+      .button:active {
+        background-color: #ccc;
       }
 
       /* SECTIONS */
@@ -43,57 +94,55 @@
       }
 
       #section-1 {
-        background-image: url("https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?w=720");
+        background-image: url("https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?w=1140");
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+      }
+
+      #section-1 h2 { margin-bottom: 1rem; }
+
+      #section-1 .button {
+        font-size: 1.25rem;
       }
 
       #section-2 {
-        background-image: url("https://images.unsplash.com/photo-1525802498323-c8fbf69eb42f?w=720");
-      }
-
-      /* TEXT CONTROLS */
-      #control {
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 10;
+        background-image: url("https://images.unsplash.com/photo-1525802498323-c8fbf69eb42f?w=1140");
       }
   </style>
 </head>
 
 <body>
   <div id="control">
-    <button id="add-text">+ Add text</button>
-    <button id="remove-text">- Remove text</button>
+    <button id="add-text">Add text between</button>
+    <button id="remove-text">Remove</button>
   </div>
-  <h1>Some Title</h1>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, autem. Repudiandae, impedit corrupti, quaerat tempore
-    aspernatur dicta voluptatum, sed eligendi consectetur sint nemo ut et vel. Nostrum, ea? Quos, necessitatibus!</p>
+  <h1>Parallax Background - DEMO</h1>
+  <p class="description">
+    <em>Add a parallax scrolling effect to html elements with a backround image.</em>
+    <br />
+    GitHub Repository <small>(Download + Docs)</small>: <a href="https://github.com/danielhoegel/parallax-background">danielhoegel/parallax-background</a>
+    <br />
+    <small>Images by <a href="https://unsplash.com">Unsplash</a></small>
+  </p>
 
   <div class="section parallax" id="section-1">
-    <h2>Some Section Title</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit saepe dolore exercitationem. Rem, asperiores. Velit libero
-      laborum molestiae nemo nisi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit saepe dolore exercitationem. Rem, asperiores. Velit libero
-      laborum molestiae nemo nisi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit saepe dolore exercitationem. Rem, asperiores. Velit libero
-      laborum molestiae nemo nisi!</p>
+    <h2>Parallax Section</h2>
+    <a class="button" href="https://github.com/danielhoegel/parallax-background">GitHub Repository</a>
   </div>
 
   <div id="between-section">
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore temporibus dolore veritatis ut illum voluptatibus sequi eum aspernatur, expedita culpa! Minus sequi est reiciendis nostrum cupiditate nihil qui vel. Pariatur, minus recusandae corrupti porro sequi voluptate, perspiciatis dolorum eaque tenetur impedit, dolorem accusantium quo incidunt nisi aperiam fugit. Illo ipsa officiis aut quidem ipsum omnis, ut corrupti perspiciatis asperiores nesciunt laudantium reprehenderit hic illum, sit incidunt, facilis quasi labore reiciendis. Dicta, iure aliquam culpa dolore minima omnis ipsum ad itaque officiis labore quia non ab placeat praesentium consequatur necessitatibus quod eligendi quaerat, consequuntur voluptate recusandae numquam officia laborum? Autem reiciendis rem fugiat beatae qui repellendus odit, distinctio libero doloremque quia. Quisquam iure dolores quo, itaque asperiores perferendis eius sed optio rerum maxime, maiores et enim eos! Minima nihil repudiandae recusandae quibusdam nostrum consequatur commodi sed? Hic delectus esse quos debitis amet! Fugiat quos sunt laborum iste? Culpa cum fugiat, officiis, voluptas commodi natus quos deleniti deserunt expedita, tempora in sed a eius explicabo vitae? Ut voluptatum, voluptatibus natus voluptates obcaecati delectus unde mollitia incidunt quia nesciunt nulla, commodi aliquam quas deserunt animi, enim eveniet aut ducimus ab sunt! Odio eos repellendus voluptates sunt molestiae eveniet maxime ipsa neque ratione rerum.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore temporibus dolore veritatis ut illum voluptatibus sequi eum aspernatur, expedita culpa! Minus sequi est reiciendis nostrum cupiditate nihil qui vel. Pariatur, minus recusandae corrupti porro sequi voluptate, perspiciatis dolorum eaque tenetur impedit, dolorem accusantium quo incidunt nisi aperiam fugit. Illo ipsa officiis aut quidem ipsum omnis, ut corrupti perspiciatis asperiores nesciunt laudantium reprehenderit hic illum, sit incidunt, facilis quasi labore reiciendis. Dicta, iure aliquam culpa dolore minima omnis ipsum ad itaque officiis labore quia non ab placeat praesentium consequatur necessitatibus quod eligendi quaerat, consequuntur voluptate recusandae numquam officia laborum? Autem reiciendis rem fugiat beatae qui repellendus odit, distinctio libero doloremque quia. Quisquam iure dolores quo, itaque asperiores perferendis eius sed optio rerum maxime, maiores et enim eos! Minima nihil repudiandae recusandae quibusdam nostrum consequatur commodi sed? Hic delectus esse quos debitis amet! Fugiat quos sunt laborum iste? Culpa cum fugiat, officiis, voluptas commodi natus quos deleniti deserunt expedita, tempora in sed a eius explicabo vitae? Ut voluptatum, voluptatibus natus voluptates obcaecati delectus unde mollitia incidunt quia nesciunt nulla, commodi aliquam quas deserunt animi, enim eveniet aut ducimus ab sunt! Odio eos repellendus voluptates sunt molestiae eveniet maxime ipsa neque ratione rerum.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore temporibus dolore veritatis ut illum voluptatibus sequi eum aspernatur, expedita culpa! Minus sequi est reiciendis nostrum cupiditate nihil qui vel. Pariatur, minus recusandae corrupti porro sequi voluptate, perspiciatis dolorum eaque tenetur impedit, dolorem accusantium quo incidunt nisi aperiam fugit. Illo ipsa officiis aut quidem ipsum omnis, ut corrupti perspiciatis asperiores nesciunt laudantium reprehenderit hic illum, sit incidunt, facilis quasi labore reiciendis. Dicta, iure aliquam culpa dolore minima omnis ipsum ad itaque officiis labore quia non ab placeat praesentium consequatur necessitatibus quod eligendi quaerat, consequuntur voluptate recusandae numquam officia laborum? Autem reiciendis rem fugiat beatae qui repellendus odit, distinctio libero doloremque quia. Quisquam iure dolores quo, itaque asperiores perferendis eius sed optio rerum maxime, maiores et enim eos! Minima nihil repudiandae recusandae quibusdam nostrum consequatur commodi sed? Hic delectus esse quos debitis amet! Fugiat quos sunt laborum iste? Culpa cum fugiat, officiis, voluptas commodi natus quos deleniti deserunt expedita, tempora in sed a eius explicabo vitae? Ut voluptatum, voluptatibus natus voluptates obcaecati delectus unde mollitia incidunt quia nesciunt nulla, commodi aliquam quas deserunt animi, enim eveniet aut ducimus ab sunt! Odio eos repellendus voluptates sunt molestiae eveniet maxime ipsa neque ratione rerum.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore temporibus dolore veritatis ut illum voluptatibus sequi eum aspernatur, expedita culpa! Minus sequi est reiciendis nostrum cupiditate nihil qui vel. Pariatur, minus recusandae corrupti porro sequi voluptate, perspiciatis dolorum eaque tenetur impedit, dolorem accusantium quo incidunt nisi aperiam fugit. Illo ipsa officiis aut quidem ipsum omnis, ut corrupti perspiciatis asperiores nesciunt laudantium reprehenderit hic illum, sit incidunt, facilis quasi labore reiciendis. Dicta, iure aliquam culpa dolore minima omnis ipsum ad itaque officiis labore quia non ab placeat praesentium consequatur necessitatibus quod eligendi quaerat, consequuntur voluptate recusandae numquam officia laborum? Autem reiciendis rem fugiat beatae qui repellendus odit, distinctio libero doloremque quia. Quisquam iure dolores quo, itaque asperiores perferendis eius sed optio rerum maxime, maiores et enim eos! Minima nihil repudiandae recusandae quibusdam nostrum consequatur commodi sed? Hic delectus esse quos debitis amet! Fugiat quos sunt laborum iste? Culpa cum fugiat, officiis, voluptas commodi natus quos deleniti deserunt expedita, tempora in sed a eius explicabo vitae? Ut voluptatum, voluptatibus natus voluptates obcaecati delectus unde mollitia incidunt quia nesciunt nulla, commodi aliquam quas deserunt animi, enim eveniet aut ducimus ab sunt! Odio eos repellendus voluptates sunt molestiae eveniet maxime ipsa neque ratione rerum.</p>
   </div>
 
   <div class="section parallax" id="section-2">
-    <h2>Some Section Title</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit saepe dolore exercitationem. Rem, asperiores. Velit libero
-      laborum molestiae nemo nisi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit saepe dolore exercitationem. Rem, asperiores. Velit libero
-      laborum molestiae nemo nisi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit saepe dolore exercitationem. Rem, asperiores. Velit libero
-      laborum molestiae nemo nisi!</p>
+    <h2>Parallax Section</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, id? Aliquam, explicabo magnam ut accusamus amet praesentium incidunt? Repellendus nostrum laboriosam cumque culpa dolore at! Sit ducimus ut cum eligendi eos nostrum corporis aut nisi labore eius doloremque atque, dolor illo dolorem itaque vero aspernatur neque saepe. Dolor, consectetur provident?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate dolor modi repellendus minima ex culpa sit explicabo neque praesentium aut eveniet hic perspiciatis veniam error delectus facilis accusamus magnam officiis, nisi quaerat temporibus vitae libero voluptatum? Autem id optio incidunt iusto dolorum at eveniet velit, beatae fugiat corrupti, vero voluptas! Deserunt officia eum ex, ipsum sint quas harum, iste cupiditate repellendus explicabo esse reiciendis quia maiores voluptate dicta! Doloremque repudiandae est sunt obcaecati, officia tempora laudantium eius non modi ipsam facere recusandae nemo at aliquid placeat praesentium laborum molestiae esse quia id, aperiam atque necessitatibus architecto. Eligendi itaque illo autem!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, id? Aliquam, explicabo magnam ut accusamus amet praesentium incidunt? Repellendus nostrum laboriosam cumque culpa dolore at! Sit ducimus ut cum eligendi eos nostrum corporis aut nisi labore eius doloremque atque, dolor illo dolorem itaque vero aspernatur neque saepe. Dolor, consectetur provident?</p>
   </div>
 
   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore temporibus dolore veritatis ut illum voluptatibus sequi eum aspernatur, expedita culpa! Minus sequi est reiciendis nostrum cupiditate nihil qui vel. Pariatur, minus recusandae corrupti porro sequi voluptate, perspiciatis dolorum eaque tenetur impedit, dolorem accusantium quo incidunt nisi aperiam fugit. Illo ipsa officiis aut quidem ipsum omnis, ut corrupti perspiciatis asperiores nesciunt laudantium reprehenderit hic illum, sit incidunt, facilis quasi labore reiciendis. Dicta, iure aliquam culpa dolore minima omnis ipsum ad itaque officiis labore quia non ab placeat praesentium consequatur necessitatibus quod eligendi quaerat, consequuntur voluptate recusandae numquam officia laborum? Autem reiciendis rem fugiat beatae qui repellendus odit, distinctio libero doloremque quia. Quisquam iure dolores quo, itaque asperiores perferendis eius sed optio rerum maxime, maiores et enim eos! Minima nihil repudiandae recusandae quibusdam nostrum consequatur commodi sed? Hic delectus esse quos debitis amet! Fugiat quos sunt laborum iste? Culpa cum fugiat, officiis, voluptas commodi natus quos deleniti deserunt expedita, tempora in sed a eius explicabo vitae? Ut voluptatum, voluptatibus natus voluptates obcaecati delectus unde mollitia incidunt quia nesciunt nulla, commodi aliquam quas deserunt animi, enim eveniet aut ducimus ab sunt! Odio eos repellendus voluptates sunt molestiae eveniet maxime ipsa neque ratione rerum.</p>
