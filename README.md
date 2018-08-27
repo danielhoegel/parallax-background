@@ -2,47 +2,29 @@
 Add a parallax scrolling effect to html elements with a backround image.
 
 ## Usage
-### 1. Import the `/dist/parallax.css.js` file into your project
+### 1. Import the `/dist/parallax.min.js` file into your project
 
-#### HTML:
 ```html
 <script src="/dist/parallax.min.js"></script>
 ```
 
-#### Node:
-```javascript
-import '/dist/parallax.min.js';
-```
-
-### 2. Add the class `parallax` to the element with the background image and set the background-attachment to fixed
+### 2. Add the class `parallax` to the element with the background image
 ```html
 <div class="my-element parallax"></div>
 <style>
   .my-element {
     background-image: url('...');
     background-size: cover;
-    background-attachment: fixed;
     padding: 100px;
   }
 </style>
 ```
 
-Optionally you can also import `/dist/parallax.min.css` to implement the following properties:
-```css
-.parallax {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-```
-
-
-#### HTML Import:
+### 3. (optional) Import the `/dist/polyfill.min.js` file **before** the `parallax.min.js` file to add ES5 polyfills
 ```html
-<link rel="stylesheet" href="/dist/parallax.min.css" />
+<script src="/dist/polyfill.min.js"></script>
 ```
-
-#### Node:
-```javascript
-import '/dist/parallax.min.css';
-```
+Used polyfills:
+- document.**querySelector**
+- document.**querySelectorAll**
+- NodeList.prototype.**forEach**
