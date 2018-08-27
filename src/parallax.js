@@ -1,10 +1,9 @@
 /**
  * Background image parallax effect
  * @author Daniel Högel <hoegel.daniel@gmail.com>
- * @version 1.0
+ * @version 1.1
  */
 (function() {
-
 	/**
 	 * Enable background parallax effect for element
 	 * @param {HTMLElement} element - DOM element with parallax class
@@ -14,8 +13,10 @@
 	function parallax(element, speedFactor = 0.3, backgroundX = '50%') {
         const top = element.offsetTop;
         const height = element.offsetHeight;
+		const style = window.getComputedStyle(element);
+		const backgroundAttachment = style.getPropertyValue('background-attachment');
 		let backgroundY = 0;
-		
+
 		/** update background position on scroll event */
 		function update() {
 			const windowTop = window.pageYOffset || document.body.scrollTop;
@@ -27,11 +28,25 @@
 			) {
 				// calc new bg top position
 				const heightPercentage = (top - windowTop) / windowHeight;
-				backgroundY = Math.round(heightPercentage * windowHeight * speedFactor);
+
+				if (backgroundAttachment === 'fixed') {
+					// the background does not move by default
+					// this needs to change in a slow movement with the page scroll
+					backgroundY = heightPercentage * windowHeight * speedFactor;
+				} else {
+					// 'scroll' || 'local'
+					// the background moves with the page scroll by default
+					// this movement needs to get slowed down
+					backgroundY =
+						-1 * windowHeight * heightPercentage // reverse the page scroll (-> fixed)
+						* (1 - speedFactor); // reduce the amount of the reverse
+				}
             }
 			
 			// set bg top position
-			element.style.backgroundPosition  = `${backgroundX} ${backgroundY}px`;
+			element.style.backgroundPosition  = `
+				${backgroundX} ${Math.round(backgroundY)}px
+			`;
 		}
 
 		// remove scroll event listener (if already set)
@@ -55,7 +70,7 @@
             const currentHeight = element.offsetHeight;
             
 			if (currentHeight !== prevHeight) {
-                prevHeight = currentHeight;
+            	prevHeight = currentHeight;
 				if (typeof callback === 'function') {
 					callback()
 				}
