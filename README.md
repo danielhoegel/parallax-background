@@ -1,5 +1,5 @@
 # Parallax Background
-Add a parallax scrolling effect to html elements with a backround image.
+Add a parallax scrolling effect to html elements with a background image.
 
 **DEMO**: https://danielhoegel.github.io/parallax-background/
 
